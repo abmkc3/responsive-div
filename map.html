@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .input
+            {
+                border:1px solid black;
+            }
+            .p{
+                color:red;
+            }
+        </style>
+    </head>
+<body>
+
+<h2>JavaScript Can Validate Input</h2>
+
+<p>Please input a number between 1 and 10:</p>
+<form>
+<table class="input">
+    <tr>
+        <td>FirstName</td>
+        <td>
+                <input type="text" id="numb1" class="input">
+                <span id="demo1" class="p"></span>
+        </td>
+
+    </tr>
+    <tr>
+            <td>LastName</td>
+            <td>
+                    <input type="text" id="numb2" class="input">
+                    <span id="demo2" class="p"></span>
+            </td>
+            </tr>
+
+            <tr>
+                    <td>Email</td>
+                    <td>
+                            <input type="text" id="numb3" class="input">
+                            <span id="demo3" class="p"></span>
+                    </td>
+                    </tr>
+   
+<tr>
+    <td>
+
+            <input type="button" value="Submit" onclick="myFunction()">
+    </td>
+    <td><input type="button" value="reload" onclick="reload()"></td>
+</tr>
+</table>
+</form>
+
+<script>
+        function myFunction() {
+            var x, text,x1;
+        
+            // Get the value of the input field with id="numb"
+            x = document.getElementById("numb1").value;
+        
+            // If x is Not a Number or less than one or greater than 10
+            if (x=="")
+             {
+                text = "*please Enter The FName";
+            } else {
+                text = "";
+            }
+            document.getElementById("demo1").innerHTML = text;
+        
+        x1 = document.getElementById("numb2").value;
+        
+        // If x is Not a Number or less than one or greater than 10
+        if (x1=="")
+         { 
+            text = "*please Enter The LName";
+        } else {
+            text = "";
+        }
+        
+        document.getElementById("demo2").innerHTML = text;
+        }
+    
+        function reload()
+        {
+            location.reload();
+        }
+        </script>
+
+</body>
+</html>
